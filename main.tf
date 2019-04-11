@@ -199,9 +199,9 @@ resource "aws_ecs_service" "ignore_changes_task_definition" {
     container_port   = "${var.container_port}"
   }
 
-  lifecycle {
-    ignore_changes = ["task_definition"]
-  }
+#   lifecycle {
+#     ignore_changes = ["task_definition"]
+#   }
 }
 
 resource "aws_ecs_service" "default" {
