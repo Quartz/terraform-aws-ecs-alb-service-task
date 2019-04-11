@@ -186,7 +186,7 @@ resource "aws_ecs_service" "ignore_changes_task_definition" {
   health_check_grace_period_seconds  = "${var.health_check_grace_period_seconds}"
   launch_type                        = "${var.launch_type}"
   cluster                            = "${var.ecs_cluster_arn}"
-  tags                               = "${module.default_label.tags}"
+#   tags                               = "${module.default_label.tags}"
 
   network_configuration {
     security_groups = ["${var.security_group_ids}", "${aws_security_group.ecs_service.id}"]
@@ -214,7 +214,7 @@ resource "aws_ecs_service" "default" {
   health_check_grace_period_seconds  = "${var.health_check_grace_period_seconds}"
   launch_type                        = "${var.launch_type}"
   cluster                            = "${var.ecs_cluster_arn}"
-  tags                               = "${module.default_label.tags}"
+#   tags                               = "${module.default_label.tags}"
 
   network_configuration {
     security_groups = ["${var.security_group_ids}", "${aws_security_group.ecs_service.id}"]
